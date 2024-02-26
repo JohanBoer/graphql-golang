@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/glyphack/graphlq-golang/graph/generated"
-	"github.com/glyphack/graphlq-golang/graph/model"
-	"github.com/glyphack/graphlq-golang/internal/auth"
-	"github.com/glyphack/graphlq-golang/internal/links"
-	"github.com/glyphack/graphlq-golang/internal/users"
-	"github.com/glyphack/graphlq-golang/pkg/jwt"
+	"github.com/JohanBoer/graphlq-golang/graph/generated"
+	"github.com/JohanBoer/graphlq-golang/graph/model"
+	"github.com/JohanBoer/graphlq-golang/internal/auth"
+	"github.com/JohanBoer/graphlq-golang/internal/links"
+	"github.com/JohanBoer/graphlq-golang/internal/users"
+	"github.com/JohanBoer/graphlq-golang/pkg/jwt"
 )
 
 func (r *mutationResolver) CreateLink(ctx context.Context, input model.NewLink) (*model.Link, error) {
@@ -33,7 +33,7 @@ func (r *mutationResolver) CreateLink(ctx context.Context, input model.NewLink) 
 	return &model.Link{ID: strconv.FormatInt(linkId, 10), Title: link.Title, Address: link.Address, User: grahpqlUser}, nil
 }
 
-func (r *mutationResolver) CreateNewUser(ctx context.Context, input model.NewUser) (string, error) {
+func (r *mutationResolver) CreateUser(ctx context.Context, input model.NewUser) (string, error) {
 	var user users.User
 	user.Username = input.Username
 	user.Password = input.Password
