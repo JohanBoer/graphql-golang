@@ -14,7 +14,7 @@ var Db *sql.DB
 
 func InitDB() {
 	// Use root:dbpass@tcp(172.17.0.2)/hackernews, if you're using Windows.
-	db, err := sql.Open("mysql", "root:dbpass@tcp(0.0.0.0:3306)/hackernews")
+	db, err := sql.Open("mysql", "root:dbpass@tcp(localhost:3306)/hackernews")
 	if err != nil {
 		log.Panic(err)
 	}
