@@ -28,6 +28,11 @@ input NewUser {
     password: String!
 }
 
+input User {
+    name: String!
+    id: ID!
+}
+
 input Login {
     username: String!
     password: String!

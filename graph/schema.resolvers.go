@@ -33,7 +33,7 @@ func (r *mutationResolver) CreateLink(ctx context.Context, input model.NewLink) 
 	return &model.Link{ID: strconv.FormatInt(linkId, 10), Title: link.Title, Address: link.Address, User: grahpqlUser}, nil
 }
 
-func (r *mutationResolver) CreateUser(ctx context.Context, input model.NewUser) (string, error) {
+func (r *mutationResolver) CreateNewUser(ctx context.Context, input model.NewUser) (string, error) {
 	var user users.User
 	user.Username = input.Username
 	user.Password = input.Password
