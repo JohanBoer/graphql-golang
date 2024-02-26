@@ -3,7 +3,7 @@ package links
 import (
 	"log"
 
-	database "github.com/JohanBoer/graphlq-golang/internal/pkg/db/database"
+	database "github.com/JohanBoer/graphlq-golang/internal/pkg/db/mysql"
 	"github.com/JohanBoer/graphlq-golang/internal/users"
 )
 
