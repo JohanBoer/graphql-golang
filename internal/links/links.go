@@ -1,9 +1,10 @@
 package links
 
 import (
-	database "github.com/glyphack/graphlq-golang/internal/pkg/db/mysql"
-	"github.com/glyphack/graphlq-golang/internal/users"
 	"log"
+
+	database "github.com/JohanBoer/graphlq-golang/internal/pkg/db/mysql"
+	"github.com/JohanBoer/graphlq-golang/internal/users"
 )
 
 // #1
@@ -14,7 +15,7 @@ type Link struct {
 	User    *users.User
 }
 
-//#2
+// #2
 func (link Link) Save() int64 {
 	//#3
 	stmt, err := database.Db.Prepare("INSERT INTO Links(Title,Address, UserID) VALUES(?,?, ?)")

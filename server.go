@@ -5,12 +5,6 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/JohanBoer/graphlq-golang/graph"
-	"github.com/JohanBoer/graphlq-golang/graph/generated"
-	"github.com/JohanBoer/graphlq-golang/internal/auth"
-	_ "github.com/JohanBoer/graphlq-golang/internal/auth"
-	database "github.com/JohanBoer/graphlq-golang/internal/pkg/db/mysql"
-
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/go-chi/chi"
@@ -26,12 +20,10 @@ func main() {
 
 	router := chi.NewRouter()
 
-	router.Use(auth.Middleware())
-
 	database.InitDB()
 	defer database.CloseDB()
 	database.Migrate()
-	server := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
+	server := handler.NewDefaultServer(hackernews.NewExecutableSchema(hackernews.Config{Resolvers: &hackernews.Resolver{}}))
 	router.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	router.Handle("/query", server)
 
