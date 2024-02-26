@@ -7,7 +7,6 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/JohanBoer/graphql-golang/internal/pkg/db/mysql/database"
 	"github.com/go-chi/chi"
 )
 
