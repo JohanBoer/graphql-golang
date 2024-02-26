@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/JohanBoer/graphlq-golang/graph/model"
-	"github.com/JohanBoer/graphlq-golang/internal/links"
+	"github.com/JohanBoer/graphql-golang/graph/model"
+	"github.com/JohanBoer/graphql-golang/internal/links"
 )
 
 // CreateLink is the resolver for the createLink field.

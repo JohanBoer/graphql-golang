@@ -1,4 +1,4 @@
-module github.com/JohanBoer/graphlq-golang
+module github.com/JohanBoer/graphql-golang
 
 go 1.16
 
