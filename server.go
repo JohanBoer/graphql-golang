@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/glyphack/graphlq-golang/graph"
-	"github.com/glyphack/graphlq-golang/graph/generated"
-	"github.com/glyphack/graphlq-golang/internal/auth"
-	_ "github.com/glyphack/graphlq-golang/internal/auth"
-	database "github.com/glyphack/graphlq-golang/internal/pkg/db/mysql"
+	"github.com/JohanBoer/graphlq-golang/graph"
+	"github.com/JohanBoer/graphlq-golang/graph/generated"
+	"github.com/JohanBoer/graphlq-golang/internal/auth"
+	_ "github.com/JohanBoer/graphlq-golang/internal/auth"
+	database "github.com/JohanBoer/graphlq-golang/internal/pkg/db/mysql"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
